@@ -26,7 +26,7 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/perf/configs/$(TARGET_BOARD_PLATFORM),$(TARGET_COPY_OUT_VENDOR)/etc)
 
 # Disable IOP HAL for select platforms.
-ifeq ($(call is-board-platform-in-list, msm8937 msm8953 msm8998 qcs605 sdm660 sdm710),true)
+ifeq ($(call is-board-platform-in-list, msm8937 msm8998 qcs605 sdm660 sdm710),true)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/perf/vendor.qti.hardware.iop@2.0-service-disable.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.iop@2.0-service-disable.rc
 endif
